@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@fontsource/inter";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle, #9963c0, #b9a2f8, #9068ee, #9e71d1, #7362d4);
+  background-size: 300% 100%;
+ 
+  color: white; /* Ensures text readability */
+}
+
+#root {
+  width: 100vw;
+}
+
+/* Smooth Background Animation */
+@keyframes gradientFlow {
+  0% { background-position: 100% 100%; }
+  25% { background-position: 75% 75%; }
+  50% { background-position: 50% 50%; }
+  75% { background-position: 25% 25%; }
+  100% { background-position: 0% 0%; }
+}
+
+.animated-bg {
+  background: inherit; /* Ensures sections get the animated gradient */
+}
+
+/* Navbar Glow (Constant on Hover) */
+.nav-link {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Keep strong glow while hovered */
+.nav-link:hover {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 
+               0 0 20px rgba(255, 255, 255, 0.3), 
+               0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle Icon Glow (Constant on Hover) */
+.social-icon {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Keep soft glow while hovered */
+.social-icon:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) 
+          drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) 
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+/* Prevent text selection and blinking cursor */
+.no-cursor {
+  user-select: none; /* Disables text selection */
+  cursor: default; /* Ensures cursor doesn't change to text select */
+  outline: none; /* Removes focus outline */
+}
