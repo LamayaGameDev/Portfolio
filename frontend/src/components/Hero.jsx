@@ -9,7 +9,7 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   return (
-    <section className="relative flex flex-col justify-center items-center text-center min-h-screen">
+    <section id="hero" className="relative flex flex-col justify-center items-center text-center min-h-screen">
       {/* Profile Image - Positioned Higher & Above the Text */}
       <motion.img
         src={meImage}
