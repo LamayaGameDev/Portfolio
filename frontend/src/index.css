@@ -61,3 +61,32 @@ html, body {
   cursor: default; /* Ensures cursor doesn't change to text select */
   outline: none; /* Removes focus outline */
 }
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;  /* Adjust the height to better accommodate larger icons */
+  background: transparent;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  min-width: 120px;  /* Increased minimum width for each icon */
+  padding: 0 50px;  /* Increased spacing between icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;  /* Further increased icon size */
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}

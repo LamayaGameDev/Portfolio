@@ -3,21 +3,18 @@ import { FaReact, FaPython, FaJs, FaHtml5, FaCss3Alt, FaNodeJs } from "react-ico
 import { SiCplusplus, SiUnity, SiFirebase, SiSwift } from "react-icons/si"; // Added Firebase, Swift, Node.js
 
 const techStack = [
-  <FaReact />,
-  <FaPython />,
-  <FaJs />,
-  <SiCplusplus />,
-  <SiUnity />,
-  <FaHtml5 />,
-  <FaCss3Alt />,
-  <FaNodeJs />,
-  <SiFirebase />,
-  <SiSwift />,
+  <FaReact />, <FaPython />, <FaJs />, <SiCplusplus />, <SiUnity />,
+  <FaHtml5 />, <FaCss3Alt />, <FaNodeJs />, <SiFirebase />, <SiSwift />,
+  // Duplicate the items multiple times based on your needs
+  <FaReact />, <FaPython />, <FaJs />, <SiCplusplus />, <SiUnity />,
+  <FaHtml5 />, <FaCss3Alt />, <FaNodeJs />, <SiFirebase />, <SiSwift />,
+  <FaReact />, <FaPython />, <FaJs />, <SiCplusplus />, <SiUnity />,
+  <FaHtml5 />, <FaCss3Alt />, <FaNodeJs />, <SiFirebase />, <SiSwift />
 ];
 
 const MarqueeTech = () => {
   return (
-    <div className="py-12 mb-70"> {/* No background color */}
+    <div className="py-12 mb-70">
       <Marquee gradient={false} speed={50} pauseOnHover={false}>
         {techStack.map((icon, index) => (
           <div

@@ -54,7 +54,7 @@ const Timeline = () => {
   return (
     <section id="about" className="min-h-screen flex flex-col items-center justify-center p-10 mb-70">
       <motion.h2
-        className="text-4xl font-bold mb-14 text-white"
+        className="text-5xl font-bold mb-14 text-white"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
