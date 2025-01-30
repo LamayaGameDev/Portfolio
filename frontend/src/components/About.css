@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+    .timeline-entry {
+      width: 100% !important; /* Force full width on smaller screens */
+    }
+  
+    .branch {
+      width: 10px !important; /* Adjust branch width */
+      background: white;
+    }
+  
+    .left-branch {
+      position: absolute;
+      right: 100%; /* Adjust branch position */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .right-branch {
+      position: absolute;
+      left: 100%; /* Adjust branch position */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* Base styles for branches */
+  .branch {
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  

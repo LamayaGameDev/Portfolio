@@ -35,7 +35,7 @@ const Contact = () => {
         transition={{ delay: 0.8, duration: 1 }}
       >
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/naveen-gunawardana"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white text-3xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
@@ -43,23 +43,17 @@ const Contact = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/naveen-gunawardana-b6503231b/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white text-3xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
         >
           <FaLinkedin />
         </a>
+        
+       
         <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white text-3xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
-        >
-          <FaTwitter />
-        </a>
-        <a
-          href="mailto:naveen@example.com"
+          href="mailto:naveenoguna@gmail.com"
           className="text-white text-3xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
         >
           <FaEnvelope />

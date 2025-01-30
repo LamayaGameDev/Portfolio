@@ -50,9 +50,9 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
         >
-          <SocialButton href="https://github.com/yourusername" icon={FaGithub} />
-          <SocialButton href="https://linkedin.com/in/yourusername" icon={FaLinkedin} />
-          <SocialButton href="/resume.pdf" icon={FaFileAlt} />
+          <SocialButton href="https://github.com/naveen-gunawardana" icon={FaGithub} />
+          <SocialButton href="https://www.linkedin.com/in/naveen-gunawardana-b6503231b/" icon={FaLinkedin} />
+          <SocialButton href="/naveengunawardana.pdf" download="naveengunawardana.pdf" icon={FaFileAlt} />
         </motion.div>
       </motion.div>
     </section>

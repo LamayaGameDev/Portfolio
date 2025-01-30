@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 
+// HoverText Component Definition
 const HoverText = ({ children, link }) => {
   const underlineVariants = {
     rest: {
       width: 0,
+      opacity: 0,
       transition: {
         duration: 0.3,
         ease: "easeOut"
@@ -11,34 +13,35 @@ const HoverText = ({ children, link }) => {
     },
     hover: {
       width: "100%",
+      opacity: 1,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: "easeInOut"
       }
     }
   };
 
   return (
-    <div style={{ display: 'inline-block', position: 'relative' }}>
+    <motion.div
+      style={{
+        display: 'inline-block',
+        position: 'relative',
+        background: 'rgba(0, 0, 0, 0.0)', // Slightly transparent black background
+        padding: '4px 8px',
+        borderRadius: '8px',
+        overflow: 'hidden'
+      }}
+      initial="rest"
+      whileHover="hover"
+    >
       <a
         href={link}
-        className="transition-all duration-300"
         style={{ 
           position: 'relative', 
           textDecoration: 'none',
-          transition: 'text-shadow 0.3s ease'
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.6)'}
-        onMouseLeave={(e) => e.currentTarget.style.textShadow = 'none'}
-        onClick={(e) => {
-          e.preventDefault(); // Prevent instant jump
-          const target = document.querySelector(link);
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 50, // Adjusts for navbar height
-              behavior: "smooth",
-            });
-          }
+          color: 'white',
+          fontWeight: 'bold',
+          display: 'block'
         }}
       >
         {children}
@@ -46,21 +49,21 @@ const HoverText = ({ children, link }) => {
           className="underline"
           style={{
             position: 'absolute',
-            bottom: 0,
+            bottom: '-2px',
             left: '50%',
             height: '2px',
             background: 'white',
-            transform: 'translateX(-50%)'
+            transform: 'translateX(-50%)',
+            borderRadius: '2px'
           }}
           variants={underlineVariants}
-          initial="rest"
-          whileHover="hover"
         />
       </a>
-    </div>
+    </motion.div>
   );
 };
 
+// Navbar Component Definition
 const Navbar = () => {
   return (
     <motion.nav
@@ -69,16 +72,14 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 w-full flex justify-center p-4 text-white z-50"
     >
-      <ul className="flex space-x-6">
+      <ul className="flex space-x-6" style={{ marginLeft: '-19px' }}> {/* Adjusted left margin here */}
         {[
           { name: "Experiences", link: "#about" },
           { name: "Projects", link: "#projects" },
           { name: "Contact", link: "#contact" },
         ].map((item, index) => (
           <li key={index} className="cursor-pointer transition">
-            <HoverText link={item.link}>
-              {item.name}
-            </HoverText>
+            <HoverText link={item.link}>{item.name}</HoverText>
           </li>
         ))}
       </ul>
